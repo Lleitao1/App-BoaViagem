@@ -8,13 +8,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var tabelaViagens: UITableView!
+    let listaViagens: Array<String> = ["Rio de Janeiro", "Ceará", "São Paulo"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.tabelaViagens.dataSource = self    
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listaViagens.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        celula.textLabel?.text = listaViagens[indexPath.row]
+        return celula
+    }
 
 }
 

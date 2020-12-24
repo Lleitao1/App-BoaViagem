@@ -97,15 +97,15 @@
 		3A8F3D4D2594BDC900FE2115 /* Boa Viagem */ = {
 			isa = PBXGroup;
 			children = (
-				3A8F3D7E2594BDFF00FE2115 /* Controller */,
-				3A8F3D7D2594BDF900FE2115 /* View */,
-				3A8F3D4E2594BDC900FE2115 /* AppDelegate.swift */,
 				3A8F3D502594BDC900FE2115 /* ViewController.swift */,
+				3A8F3D4E2594BDC900FE2115 /* AppDelegate.swift */,
 				3A8F3D522594BDC900FE2115 /* Main.storyboard */,
-				3A8F3D552594BDCB00FE2115 /* Assets.xcassets */,
 				3A8F3D7C2594BDE700FE2115 /* Models */,
+				3A8F3D7D2594BDF900FE2115 /* View */,
+				3A8F3D7E2594BDFF00FE2115 /* Controller */,
 				3A8F3D572594BDCB00FE2115 /* LaunchScreen.storyboard */,
 				3A8F3D5A2594BDCB00FE2115 /* Info.plist */,
+				3A8F3D552594BDCB00FE2115 /* Assets.xcassets */,
 			);
 			path = "Boa Viagem";
 			sourceTree = "<group>";
