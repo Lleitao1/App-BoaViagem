@@ -8,23 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var viewHoteis: UIView!
     @IBOutlet weak var tabelaViagens: UITableView!
-    let listaViagens: Array<String> = ["Rio de Janeiro", "Ceará", "São Paulo"]
+    @IBOutlet weak var viewPacotes: UIView!
+    
+    let listaViagens: Array<Viagem> = ViagemDAO().retornaTodasAsViagens()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabelaViagens.dataSource = self    
+        self.tabelaViagens.dataSource = self
+        self.tabelaViagens.delegate = self
+        self.viewPacotes.layer.cornerRadius = 10
+        self.viewHoteis.layer.cornerRadius = 10 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listaViagens.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
-        celula.textLabel?.text = listaViagens[indexPath.row]
+        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! TableViewCell
+        let viagemAtual = listaViagens[indexPath.row]
+        
+        celula.labelTitulo.text = viagemAtual.titulo
+        celula.labelQuantidadeDeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
+        celula.labelPreco.text = viagemAtual.preco
+        celula.imagemViagem.image = UIImage(named: viagemAtual.imgpath)
         return celula
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 175
     }
 
 }
