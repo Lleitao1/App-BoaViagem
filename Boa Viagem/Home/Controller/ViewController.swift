@@ -35,6 +35,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         celula.labelQuantidadeDeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
         celula.labelPreco.text = viagemAtual.preco
         celula.imagemViagem.image = UIImage(named: viagemAtual.imgpath)
+        
+        celula.imagemViagem.layer.cornerRadius = 10
+        celula.imagemViagem.layer.masksToBounds = true
+        
+        
         return celula
     }
     

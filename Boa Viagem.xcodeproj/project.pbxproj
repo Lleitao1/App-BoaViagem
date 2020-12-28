@@ -16,12 +16,12 @@
 		3A8F3D6F2594BDCB00FE2115 /* Boa_ViagemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F3D6E2594BDCB00FE2115 /* Boa_ViagemUITests.swift */; };
 		3A8F3D802599F48400FE2115 /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F3D7F2599F48400FE2115 /* Viagem.swift */; };
 		3A8F3D822599F74100FE2115 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F3D812599F74100FE2115 /* TableViewCell.swift */; };
-		3A8F3D842599FBC200FE2115 /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F3D832599FBC200FE2115 /* ViagemDAO.swift */; };
 		3A8F3D91259A01F800FE2115 /* img5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F3D8C259A01F800FE2115 /* img5.jpg */; };
 		3A8F3D92259A01F800FE2115 /* img4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F3D8D259A01F800FE2115 /* img4.jpg */; };
 		3A8F3D93259A01F800FE2115 /* img3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F3D8E259A01F800FE2115 /* img3.jpg */; };
 		3A8F3D94259A01F800FE2115 /* img2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F3D8F259A01F800FE2115 /* img2.jpg */; };
 		3A8F3D95259A01F800FE2115 /* img1.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A8F3D90259A01F800FE2115 /* img1.png */; };
+		3A8F3D9F259A074500FE2115 /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8F3D9E259A074500FE2115 /* ViagemDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,12 +57,12 @@
 		3A8F3D702594BDCB00FE2115 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A8F3D7F2599F48400FE2115 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
 		3A8F3D812599F74100FE2115 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		3A8F3D832599FBC200FE2115 /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViagemDAO.swift; path = "../../Arquivos Projeto/ViagemDAO.swift"; sourceTree = "<group>"; };
 		3A8F3D8C259A01F800FE2115 /* img5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img5.jpg; sourceTree = "<group>"; };
 		3A8F3D8D259A01F800FE2115 /* img4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img4.jpg; sourceTree = "<group>"; };
 		3A8F3D8E259A01F800FE2115 /* img3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.jpg; sourceTree = "<group>"; };
 		3A8F3D8F259A01F800FE2115 /* img2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img2.jpg; sourceTree = "<group>"; };
 		3A8F3D90259A01F800FE2115 /* img1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img1.png; sourceTree = "<group>"; };
+		3A8F3D9E259A074500FE2115 /* ViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +113,11 @@
 		3A8F3D4D2594BDC900FE2115 /* Boa Viagem */ = {
 			isa = PBXGroup;
 			children = (
-				3A8F3D502594BDC900FE2115 /* ViewController.swift */,
 				3A8F3D4E2594BDC900FE2115 /* AppDelegate.swift */,
-				3A8F3D7F2599F48400FE2115 /* Viagem.swift */,
-				3A8F3D832599FBC200FE2115 /* ViagemDAO.swift */,
+				3A8F3D96259A066D00FE2115 /* Model */,
+				3A8F3D97259A067B00FE2115 /* Home */,
+				3A8F3D9A259A06B700FE2115 /* ViagemDAO */,
 				3A8F3D8B259A01F800FE2115 /* Assets */,
-				3A8F3D812599F74100FE2115 /* TableViewCell.swift */,
 				3A8F3D522594BDC900FE2115 /* Main.storyboard */,
 				3A8F3D7C2594BDE700FE2115 /* Models */,
 				3A8F3D7D2594BDF900FE2115 /* View */,
@@ -180,6 +179,47 @@
 			);
 			name = Assets;
 			path = "../../Arquivos Projeto/Assets";
+			sourceTree = "<group>";
+		};
+		3A8F3D96259A066D00FE2115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F3D7F2599F48400FE2115 /* Viagem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A8F3D97259A067B00FE2115 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F3D99259A069400FE2115 /* View */,
+				3A8F3D98259A068B00FE2115 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3A8F3D98259A068B00FE2115 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F3D502594BDC900FE2115 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A8F3D99259A069400FE2115 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F3D812599F74100FE2115 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A8F3D9A259A06B700FE2115 /* ViagemDAO */ = {
+			isa = PBXGroup;
+			children = (
+				3A8F3D9E259A074500FE2115 /* ViagemDAO.swift */,
+			);
+			path = ViagemDAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8F3D512594BDC900FE2115 /* ViewController.swift in Sources */,
-				3A8F3D842599FBC200FE2115 /* ViagemDAO.swift in Sources */,
+				3A8F3D9F259A074500FE2115 /* ViagemDAO.swift in Sources */,
 				3A8F3D822599F74100FE2115 /* TableViewCell.swift in Sources */,
 				3A8F3D802599F48400FE2115 /* Viagem.swift in Sources */,
 				3A8F3D4F2594BDC900FE2115 /* AppDelegate.swift in Sources */,
