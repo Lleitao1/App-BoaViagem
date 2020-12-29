@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yzD-ad-dCO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NbX-Fz-WuB">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--procurar-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Boa_Viagem" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-Qa-sOJ">
-                                <rect key="frame" x="0.0" y="203" width="320" height="365"/>
+                                <rect key="frame" x="0.0" y="203" width="320" height="316"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" rowHeight="175" id="Tte-Fc-QMI" customClass="TableViewCell" customModule="Boa_Viagem" customModuleProvider="target">
@@ -218,6 +218,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="procurar" id="QEL-Wq-px2"/>
                     <connections>
                         <outlet property="tabelaViagens" destination="Q5Q-Qa-sOJ" id="IG5-wu-akx"/>
                         <outlet property="viewHoteis" destination="eJ4-6y-E3z" id="D7n-Pq-9kf"/>
@@ -226,9 +227,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-334.375" y="-20.5078125"/>
+            <point key="canvasLocation" x="43" y="-13"/>
         </scene>
-        <!--Pacote Viagens View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="3iS-sB-kY7">
+            <objects>
+                <tabBarController id="NbX-Fz-WuB" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qKp-sN-uI3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="6Xe-9b-r8c"/>
+                        <segue destination="yzD-ad-dCO" kind="relationship" relationship="viewControllers" id="DIw-Y7-tki"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTA-L6-JY0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-744" y="-13"/>
+        </scene>
+        <!--pacotes-->
         <scene sceneID="Ytq-ZM-tGw">
             <objects>
                 <viewController id="yzD-ad-dCO" customClass="PacoteViagensViewController" customModule="Boa_Viagem" customModuleProvider="target" sceneMemberID="viewController">
@@ -237,7 +256,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="1fu-Yn-jLa">
-                                <rect key="frame" x="15" y="20" width="290" height="548"/>
+                                <rect key="frame" x="15" y="20" width="290" height="499"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pacotes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-rD-eoV">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="30"/>
@@ -248,17 +267,16 @@
                                         <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THO-CS-8RV">
-                                        <rect key="frame" x="0.0" y="33" width="290" height="30"/>
+                                    <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0V-oc-Fhu">
+                                        <rect key="frame" x="0.0" y="33" width="290" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="RdG-m5-tgp"/>
+                                            <constraint firstAttribute="height" constant="35" id="rvT-cu-7HD"/>
                                         </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="barTintColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pacotes encontrados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdp-DM-tnV">
-                                        <rect key="frame" x="0.0" y="66" width="290" height="30"/>
+                                        <rect key="frame" x="0.0" y="71" width="290" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="w1A-b0-CGU"/>
                                         </constraints>
@@ -267,7 +285,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hpk-S6-DJL">
-                                        <rect key="frame" x="0.0" y="99" width="290" height="449"/>
+                                        <rect key="frame" x="0.0" y="104" width="290" height="395"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="A3J-pt-ssz">
                                             <size key="itemSize" width="135" height="165"/>
@@ -336,7 +354,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1fu-Yn-jLa" firstAttribute="top" secondItem="vte-X6-13U" secondAttribute="top" id="6Op-w1-tVC"/>
                             <constraint firstItem="1fu-Yn-jLa" firstAttribute="bottom" secondItem="vte-X6-13U" secondAttribute="bottom" id="nR8-96-ryU"/>
@@ -345,13 +363,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vte-X6-13U"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="pacotes" id="Yim-pz-31f"/>
                     <connections>
                         <outlet property="colecaoPacotesViagem" destination="Hpk-S6-DJL" id="DUc-99-TJA"/>
+                        <outlet property="labelContadorPacotes" destination="zdp-DM-tnV" id="KK5-uT-XIf"/>
+                        <outlet property="pesquisarViagens" destination="t0V-oc-Fhu" id="x4t-Ib-BTT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zPs-gJ-vie" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956.25" y="-12.67605633802817"/>
+            <point key="canvasLocation" x="810" y="-14"/>
         </scene>
     </scenes>
 </document>
