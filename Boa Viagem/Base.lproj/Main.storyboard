@@ -562,25 +562,29 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nome no cartão de crédito" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="maX-DX-0Po">
                                                         <rect key="frame" x="0.0" y="37" width="355" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="data de validade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ugy-dN-OOU">
                                                         <rect key="frame" x="0.0" y="74" width="355" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="textFieldEntrouFoco:" destination="aBC-gH-QMn" eventType="editingDidEnd" id="l97-xh-ohZ"/>
+                                                            <action selector="textFieldEntrouFoco:" destination="aBC-gH-QMn" eventType="editingDidBegin" id="nxQ-eL-Mla"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Tr-dV-VOs">
                                                         <rect key="frame" x="0.0" y="111" width="355" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rs3-Io-jf6">
                                                         <rect key="frame" x="0.0" y="148" width="355" height="30"/>
@@ -630,6 +634,7 @@
                         <outlet property="labelPrecoViagem" destination="esu-ql-J2f" id="woS-8o-xnw"/>
                         <outlet property="labelTituloPacoteViagem" destination="rqV-kG-rH7" id="Nyy-tH-Im1"/>
                         <outlet property="scrollPrincipal" destination="N88-yC-Yb9" id="wyM-xA-f0u"/>
+                        <outlet property="textFieldData" destination="ugy-dN-OOU" id="qF9-Kd-ez9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lts-Wr-hfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
